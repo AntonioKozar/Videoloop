@@ -2,7 +2,7 @@
 function db_connect()
 {
     $username = "root";
-    $password = "nqld.66R";
+    $password = "";
     $host = "localhost";
     $database = "videoloop";
     $db_connection = mysqli_connect($host, $username, $password, $database) or die("Error : " . mysqli_error());
@@ -14,17 +14,17 @@ function UserVerification($pin)
 {
     switch($pin)
     {
-        case "0811":
+        case "0001":
             session_start();
-            $_SESSION['user']="Antonio Kožar";
+            $_SESSION['user']="User 1";
             $name = true;
-            log_message("Logiran korisnik Antonio Kožar.");
+            log_message("Logiran korisnik User 1.");
             break;
-        case "6854":
+        case "0002":
             session_start();
-            $_SESSION['user']="Oto Wilhelm";
+            $_SESSION['user']="User 2";
             $name = true;
-            log_message("Logiran korisnik Oto Wilhelm.");
+            log_message("Logiran korisnik User 2.");
             break;
         default :
             $name = false;
